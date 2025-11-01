@@ -1,52 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
-</head>
-<body>
-    <p>Hi everyone, Welcome to Registration Page</p>
-    <p>today is a {{day}} </p>
-    <p>time is a {{time}} </p>
-    <div class="centered">
-        <form action="/submit" method="POST" >
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter your name">
-        <br>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email">
-        <br>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password">
-        <br>
-        <div style="display: flex;flex-direction: column; align-items: center; margin-top: 20px; ">
-        <input type="submit" value="Submit"  style="text-align: center; ">
-        </div>
-       </form>
-       <a href="get_data"><button>View Data</button></a>
-    </div>
-   
-</body>
-<style>
-    body{
-        background-color: #b7f6f7;
-    }
-    p{
-        text-align: center;
-         font-size: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: rgb(18, 17, 17);
-    }
-    .centered{
-        margin: auto;
-        width: 50%;
-        border: 2px solid rgb(20, 177, 208);
-        padding: 10px;
-        margin-top: 10px;
-    }
-    input{
-        margin-top: 10px;
-    }
-</style>
-</html>
+<hr>
+<h2>New To-Do Form (Step 3)</h2>
+<form action="/submittodoitem" method="POST">
+  <label>Item Name:</label>
+  <input type="text" name="itemName" required><br><br>
+
+  <label>Item Description:</label>
+  <textarea name="itemDescription" required></textarea><br><br>
+
+  <button type="submit">Submit</button>
+</form>
