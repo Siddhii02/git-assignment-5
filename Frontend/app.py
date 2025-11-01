@@ -36,11 +36,11 @@ def submit():
 def submit_todo():
     item_name = request.form.get('itemName')
     item_description = request.form.get('itemDescription')
-
+    item_id = request.form.get('itemId')
     try:
         response = requests.post(
             f'{BACKEND_URL}/submittodoitem',
-            data={'itemName': item_name, 'itemDescription': item_description}
+            data={'itemName': item_name, 'itemDescription': item_description,'itemId': item_id}
         )
 
         if response.status_code == 200:
